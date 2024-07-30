@@ -1,0 +1,18 @@
+3)ADDITION:
+import java.util.*;
+class Addition {
+
+    public static int add(int num){
+        if(num==0){
+          return 0;
+        }
+        return num%10+add(num/10);
+    }
+    public static void main(String[] arg){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        Addition obj=new Addition();
+        System.out.println(obj.add(n));
+    
+}
+}
