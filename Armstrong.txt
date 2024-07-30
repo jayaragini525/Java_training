@@ -1,0 +1,35 @@
+1)ARMSTRONG:
+ 
+import java.lang.*;
+import java.util.*;
+class Main {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+        int num=n;
+        int n1=n;
+        int ans,sum=0;
+		int count=0;
+		while(n>0) {
+			int rem=n%10;
+			count++;
+			n=n/10;		
+		}
+		System.out.println("Length:"+count);
+		while(num>0){
+		    int res=num%10;
+		    ans=(int)Math.pow(res,count);
+		    sum=sum+ans;
+		    num=num/10;
+		}
+		System.out.println("sum"+sum);
+		if(n1==sum){
+		    System.out.println("Armstrong");
+		}
+		else{
+		    System.out.println("not Armstrong");
+		}
+	}
+
+}
