@@ -1,0 +1,25 @@
+2D printing:
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the rows:");
+        int rows=s.nextInt();
+        System.out.println("Enter the column:");
+        int column=s.nextInt();
+        System.out.println("Enter the array elements:");
+        int A[][]=new int[rows][column];
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<column;j++){
+                A[i][j]=s.nextInt();
+            }
+        }
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<column;j++){
+               System.out.print(A[i][j]);
+            }
+               System.out.println();
+        }
+   }
+}
