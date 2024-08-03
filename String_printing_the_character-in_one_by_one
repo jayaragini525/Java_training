@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.String;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String str="Hello";
+        String str2="Saveetha";
+        int x=str.length();
+        int y=str2.length();
+        int max=x>y?x:y;
+        for(int i=0;i<max;i++){
+           if(x<y){
+           System.out.println(str.charAt(i%x));
+           System.out.println(str2.charAt(i));
+           }
+           else{
+           System.out.println(str.charAt(i));
+           System.out.println(str2.charAt(i%y));
+           }
+        }
+    }
+}
