@@ -1,0 +1,19 @@
+import java.util.*;
+import java.lang.String;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("enter the String:");
+        String str=s.nextLine();
+       
+        for(int i=0;i<str.length();i+=2){
+            if(i%2==0){
+             char ch=str.charAt(i);
+            for(int j=0;j<(str.charAt(i+1)-48);j++){
+                System.out.print(ch);
+            }
+            }
+        }
+        
+    }
+}
