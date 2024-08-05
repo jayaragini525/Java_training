@@ -1,0 +1,20 @@
+import java.util.*;
+import java.lang.String;
+import java.util.Arrays;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n[]={1,4,5,9,10,40,50,90,100,400,500,900,1000};
+        System.out.println("enter the number:");
+        int num=s.nextInt();
+        String str[]={"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
+        String ans=" ";
+        for(int i=n.length-1;i>=0;i--){
+            while(num>=n[i]){
+                num=num-n[i];
+                ans+=str[i];
+            }
+        }
+        System.out.print(ans);
+    }
+}
