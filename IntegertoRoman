@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.lang.String;
+import java.util.Arrays;
+class roman {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num[]={1,5,10,50,100,500,1000};
+        char s[]={ 'I','V','X','L','C','D','M' };
+        System.out.println("Enter the String");
+        String str=sc.nextLine();
+        int temp=0;
+        int sum=0;
+        int prev=0;
+        
+        for(int i=str.length()-1;i>=0;i--)
+        {
+            temp=0;
+            char ch=str.charAt(i);
+            for(int j=0;j<s.length;j++)
+            {
+                if(ch==s[j])
+                {
+                    temp=num[j];
+                    break;
+                }
+            }
+                if(temp<prev)
+                {
+                    sum-=temp;
+                }
+                else
+                {
+                    sum+=temp;
+                }
+                prev=temp;
+        }
+        System.out.print(sum);
+    }
+}
