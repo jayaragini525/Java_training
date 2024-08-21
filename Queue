@@ -1,0 +1,67 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Queue s=new Queue (5);
+        s.push(sc.nextInt());
+        s.push(sc.nextInt());
+        s.push(sc.nextInt());
+        s.push(sc.nextInt());
+        s.push(sc.nextInt());
+        System.out.println("After the poping:");
+        s.pop();
+        
+        s.display();
+    }
+}
+class  Queue 
+{
+    int queue[];
+    int top;
+    int size;
+    Queue (int capacity)
+    {
+        size=capacity;
+        queue=new int[size];
+       
+        top=-1;
+    }
+    void push(int value)
+    {
+        if(top<size-1)
+        {
+           queue[++top]=value;
+        }
+        else if(top==size-1)
+       {
+           System.out.println(" Queue  is full");
+       }
+    }
+void pop()
+{
+    if(top>=0)
+    {
+       for(int i=0;i<top;i++){
+          queue[i]=queue[i+1];
+       }
+       top--;
+    }
+    else if(top==-1)
+    {
+        System.out.println(" Queue  is empty");
+    }
+}
+/*void peek(){
+    int peek=stack[top];
+    System.out.println("peek value :" +peek);
+}*/
+void display(){
+    int i=0;
+    while(i<=top){
+        System.out.print( queue [i]+" ");
+        i++;
+    }
+}
+}
